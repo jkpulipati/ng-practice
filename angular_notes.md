@@ -17,11 +17,11 @@ ng new app_name
 
 ## components:
 
--> angular is a component based architecture, which means that whatever you see in browser is a component
--> component consists of the following parts
-	-> a typescript class is called component class
-	-> a html file is called template of the component
-	-> an optional css file for the styling of the component
+angular is a component based architecture, which means that whatever you see in browser is a component
+component consists of the following parts
+A typescript class is called component class
+A html file is called template of the component
+an optional css file for the styling of the component
 
 Modules
 Components
