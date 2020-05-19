@@ -1,0 +1,16 @@
+<h1 *ngIf="title">App Component</h1>
+
+
+<span [ngClass]="{'bg-color': !isExtraCss }">{{test()}}</span>
+
+<ul>
+    <li *ngFor="let hero of heros">{{hero}}</li>
+</ul>
+
+<div [ngSwitch]="title">
+    <span *ngSwitchCase="'Angular'">Title 1</span>
+    <span *ngSwitchCase="'React'">Title 9</span>
+</div>
+
+
+
