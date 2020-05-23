@@ -14,3 +14,7 @@
 <br/>
 <span appHighlight>Attribute Directive</span>
 
+Counter: {{counter}}
+<button (click)="incValue()">Inc</button>
+<app-counter [counter]="counter" (incrementCounter)="incrementCounter($event)" ></app-counter>
+
