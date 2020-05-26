@@ -1,7 +1,12 @@
 <h1 *ngIf="title">App Component</h1>
 
+Is Pass : {{isPass}}
 
-<span [ngClass]="{'bg-color': !isExtraCss }">{{test()}}</span>
+<br/>
+<button (click)="update()">Update</button>
+
+<!-- <span [ngClass]="{'bg-color': !isExtraCss }">{{test()}}</span> -->
+
 
 <ul>
     <li *ngFor="let hero of heros">{{hero}}</li>

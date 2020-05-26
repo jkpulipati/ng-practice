@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-counter',
@@ -7,10 +8,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
+  status: boolean;
+
   @Input() counter: number;
   @Output() incrementCounter: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private sharedService: SharedService) {
+    // this.status = this.sharedService.getIsPass();
+
+    this.sharedService.isPass$.subscribe(value => {
+      this.status = value;
+    });
+  }
 
   ngOnInit(): void {
     console.log(this.counter, this.incrementCounter);
@@ -19,6 +28,10 @@ export class CounterComponent implements OnInit {
   incCounter() {
     this.counter += 1;
     this.incrementCounter.emit(this.counter);
+  }
+
+  Refresh() {
+    this.status = this.sharedService.getIsPass();
   }
 
 }

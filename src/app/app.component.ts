@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
+import { SharedService } from './shared.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,9 @@ export class AppComponent {
 
   counter: number = 1;
 
-  constructor() {
+  isPass: boolean = true;
+
+  constructor(private sharedService: SharedService) {
     // are the place where the initialization will happen
     this.title = 'Angular';
     this.heros = ['A', 'B', 'C'];
@@ -33,6 +36,13 @@ export class AppComponent {
   incrementCounter(value) {
     console.log('from parent ', value);
     this.counter = value;
+  }
+
+  update() {
+    this.isPass = !this.isPass;
+    this.sharedService.setIsPass(this.isPass);
+
+    this.sharedService.isPass$.next(this.isPass);
   }
 
 }
