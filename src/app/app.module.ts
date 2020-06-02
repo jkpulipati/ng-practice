@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { HighlightDirective } from './highlight.directive';
 import { CounterComponent } from './counter/counter.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HighlightDirective,
-    CounterComponent
+    CounterComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

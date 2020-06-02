@@ -1,16 +1,31 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
 import { SharedService } from './shared.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  // template: `
+  //   <h1>App Component<h1>
+  //   <style>
+  //     h1 {
+  //       background-color: red;
+  //     }
+  //   </style>
+  // `,
+  styleUrls: ['./app.component.css'],
+  // styles: [
+  //   `
+       
+  //   `
+  // ],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
   title: string;
   heros: Array<string> = [];
   isExtraCss: boolean = false;
+  todaysDate: Date = new Date();
   @ViewChild(CounterComponent) counterComponent: CounterComponent;
 
   counter: number = 1;

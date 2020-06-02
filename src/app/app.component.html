@@ -23,3 +23,31 @@ Counter: {{counter}}
 <button (click)="incValue()">Inc</button>
 <app-counter [counter]="counter" (incrementCounter)="incrementCounter($event)" ></app-counter>
 
+<br/><hr/>
+{{'jaya' | uppercase }}
+{{'JAYA' | lowercase }}
+
+{{123 | currency }}
+
+<div>{{[1, 2, 3, 4] | slice:0:3 }}</div>
+
+
+<p>{{'Lorrem lakjsdf lkajsdf lkjasdf lajsdf' | truncate: 0: 6 }} </p>
+
+<div>Today's Date : {{todaysDate | date: 'fullDate' | uppercase }}</div>
+<div>Today's Date : {{todaysDate | date: 'shortDate'}}</div>
+<div>Today's Date : {{todaysDate | date: 'MM/dd/yy'}}</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -89,3 +89,9 @@ DI
    
    `structural Directives` -- *ngIf, *ngFor, *ngSwitch
    `attribute Directives`
+
+## View Encapsulation
+	None
+	Emulated
+	ShadowDom
+
