@@ -1,13 +1,25 @@
-<h1 *ngIf="title">App Component</h1>
+<h2>App Component</h2>
+<nav>
+    <ul>
+        <li><a routerLink="home">Home</a></li>
+        <li><a routerLink="product">Product</a></li>
+    </ul>
+</nav>
+
+<button (click)="navigate()">Home</button>
+
+<router-outlet></router-outlet>
+
+<!-- <h1 *ngIf="title">App Component</h1>
 
 Is Pass : {{isPass}}
 
 <br/>
-<button (click)="update()">Update</button>
+<button (click)="update()">Update</button> -->
 
 <!-- <span [ngClass]="{'bg-color': !isExtraCss }">{{test()}}</span> -->
 
-
+<!-- 
 <ul>
     <li *ngFor="let hero of heros">{{hero}}</li>
 </ul>
@@ -36,7 +48,7 @@ Counter: {{counter}}
 
 <div>Today's Date : {{todaysDate | date: 'fullDate' | uppercase }}</div>
 <div>Today's Date : {{todaysDate | date: 'shortDate'}}</div>
-<div>Today's Date : {{todaysDate | date: 'MM/dd/yy'}}</div>
+<div>Today's Date : {{todaysDate | date: 'MM/dd/yy'}}</div> -->
 
 
 

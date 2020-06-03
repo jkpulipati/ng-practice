@@ -1,6 +1,7 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
 import { SharedService } from './shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,7 @@ export class AppComponent {
 
   isPass: boolean = true;
 
-  constructor(private sharedService: SharedService) {
+  constructor(private sharedService: SharedService, private router: Router) {
     // are the place where the initialization will happen
     this.title = 'Angular';
     this.heros = ['A', 'B', 'C'];
@@ -58,6 +59,11 @@ export class AppComponent {
     this.sharedService.setIsPass(this.isPass);
 
     this.sharedService.isPass$.next(this.isPass);
+  }
+
+  navigate() {
+    // logic
+    this.router.navigate(['home']);
   }
 
 }
